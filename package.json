@@ -1,0 +1,38 @@
+{
+  "name": "option-chains-node",
+  "version": "1.0.0",
+  "description": "Node backend service for updating daily option chain data into MySQL.",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "update:options": "tsx src/scripts/runDailyUpdate.ts"
+  },
+  "keywords": [
+    "options",
+    "node",
+    "mysql",
+    "backend"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@alpacahq/alpaca-trade-api": "^3.1.3",
+    "axios": "^1.9.0",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "mysql2": "^3.14.1",
+    "node-cron": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.21",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
