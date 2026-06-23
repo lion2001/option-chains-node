@@ -58,5 +58,5 @@ export const env = {
   },
   optionDataApiUrl: process.env.OPTION_DATA_API_URL ?? "",
   optionDataApiKey: process.env.OPTION_DATA_API_KEY ?? "",
-  useMockSource: parseBoolean(process.env.USE_MOCK_SOURCE, true)
+  useMockSource: parseBoolean(process.env.USE_MOCK_SOURCE, false)
 };
